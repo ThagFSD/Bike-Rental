@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 30px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
 }
@@ -13,6 +13,15 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: #302d2d;
+}
+
+.darkmode {
+    background: #000;
+}
+
+.darkmode-text {
+    color: #eee;
 }
 
 i {
@@ -31,7 +40,6 @@ span {
     justify-content: center;
     font-size: 1.8rem;
     font-weight: 800;
-    color: #302d2d;
 }
 
 .container .clock-container {
@@ -39,71 +47,86 @@ span {
     flex-direction: row;
     justify-content: center;
 }
-.container .clock-container .colon {
+.container .clock-container .secs {
     font-size: 6rem;
 }
 
-.container .clock-container .display-secs span{
+.container .clock-container .span-color {
+    color: #302d2d;
+}
+
+.container .clock-container .display-secs .secs{
     color: #afacac;
 }
 
 .container .fetures {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     color: #3b3939;
     justify-content: center;
 }
 
-input[type="checkbox"].toggle {
-    opacity: 0;
-    cursor: pointer;
-    position: absolute;
-    top: 9000rem;
-}
-
-input[type="checkbox"].toggle + p{
-    display: flex;
-    gap: .25em;
-    align-items: center;
+.container .toggle-theme {
+    width: 2.9rem;
+    height: 1.4rem;
+    border: solid #302d2d;
+    border-radius: 3rem;
     position: relative;
-    font-size: 2rem;
+    cursor: pointer;
 }
-
-input[type="checkbox"].toggle + p::before{
-   content: " ";
-   width: 2em;
-   height: 1em;
-   background-color: #eee;
-   border-radius: 1em;
-   border: .1rem #3b3939 solid;
-}
-
-input[type="checkbox"].toggle + p::after{
+.container .toggle-theme::before {
+    content: ' ';
     position: absolute;
-    content: " ";
+    top: .04em;
     left: .1em;
-    width: 0.8em;
-    height: 0.8em;
-    border-radius: 1em;
-    border: .1rem #3b3939 solid;
+    width: .9em;
+    height: .9em;
+    border: solid #302d2d;
+    border-radius: 3rem;
+    transition: 200ms ease-in-out;
 }
 
-input[type="checkbox"].toggle:checked + p::before{
+.container .toggle-theme.active {
+    border: #eee solid;
+}
+
+.container .toggle-theme.active::before {
+    transform: translateX(100%);
+    left: .4em;
+    transition: 200ms ease-in-out;
     background-color: #000;
-    border: .1rem #eee solid;
+    border: #eee solid;
 }
 
-input[type="checkbox"].toggle:checked + p::after{
-   transform: translateX(100%);
-   border: .1rem #eee solid;
-   border-radius: 1em;
-   background-color: #000;
+.container .toggle-12hrs {
+    width: 2.9rem;
+    height: 1.4rem;
+    border: solid #302d2d;
+    border-radius: 3rem;
+    position: relative;
+    cursor: pointer;
+}
+.container .toggle-12hrs::before {
+    content: ' ';
+    position: absolute;
+    top: .04em;
+    left: .1em;
+    width: .9em;
+    height: .9em;
+    border: var(--before,solid #302d2d);
+    border-radius: 3rem;
+    transition: 200ms ease-in-out;
 }
 
-input[type="checkbox"].toggle:checked + p{
-    color: red;
+
+.container .toggle-12hrs.active-h::before {
+    transform: translateX(100%);
+    left: .4em;
+    transition: 200ms ease-in-out;
 }
+
+
 
 
 

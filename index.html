@@ -15,15 +15,15 @@
       <div id="date"><h1>Mnda, 4 February 2022</h1></div>
       <div class="clock-container">
         <div class="display-hour">
-          <span id="hour">00</span>
+          <span id="hour" class="hr">00</span>
         </div>
         <div class="display-mins">
-          <span>∶</span>
-          <span id="minutes">00</span>
+          <span class="min">∶</span>
+          <span id="minutes" class="min">00</span>
         </div>
         <div class="display-secs">
-          <span class="colon">∶</span>
-          <span id="seconds" class="colon">00</span>
+          <span class="secs">∶</span>
+          <span id="seconds" class="secs">00</span>
         </div>
         <div class="display-12hrs">
           <!-- <h1 class="ampm">AM</h1> -->
@@ -31,13 +31,10 @@
       </div>
       <div class="fetures container">
         <div class="fetures">
-          <input type="checkbox" id="format" class="toggle">
-          <label for="format"></label>
-          <h1>12 Hours</h1>
-          <!--  -->
-          <input type="checkbox" id="theme" class="toggle">
-          <label for="theme"></label>
-          <h1>Night Mode</h1>
+          <div class="toggle-theme"></div>
+          <p>Night Mode</p>
+          <div class="toggle-12hrs"></div>
+          <p>12 hours</p>
         </div>
       </div>
     </div>
