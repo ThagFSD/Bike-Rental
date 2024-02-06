@@ -119,13 +119,22 @@ span {
     transition: 200ms ease-in-out;
 }
 
-
 .container .toggle-12hrs.active-h::before {
     transform: translateX(100%);
     left: .4em;
     transition: 200ms ease-in-out;
 }
 
+.container .display-12hrs {
+    position: relative;
+}
+
+#ampm {
+    position: absolute;
+    top: 1em;
+    font-size: 1.5em;
+    visibility: hidden;
+}
 
 
 

@@ -14,7 +14,7 @@
     <div class="container">
       <div id="date"><h1>Mnda, 4 February 2022</h1></div>
       <div class="clock-container">
-        <div class="display-hour">
+        <div class="display-hour" data-format = "12">
           <span id="hour" class="hr">00</span>
         </div>
         <div class="display-mins">
@@ -26,19 +26,20 @@
           <span id="seconds" class="secs">00</span>
         </div>
         <div class="display-12hrs">
-          <!-- <h1 class="ampm">AM</h1> -->
+          <h1 id="ampm"></h1>
         </div>
       </div>
       <div class="fetures container">
         <div class="fetures">
           <div class="toggle-theme"></div>
           <p>Night Mode</p>
-          <div class="toggle-12hrs"></div>
+          <div class="toggle-12hrs" data-format="24"></div>
           <p>12 hours</p>
         </div>
       </div>
     </div>
     <script src="script-darkmode.js"></script>
+    <script src="script-12hrs.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
